@@ -1,0 +1,58 @@
+{
+  "iteration": 1,
+  "summary": "Verified CSS-only contrast fix on Location Intelligence page and regression across other pages. All 6 acceptance criteria exercised via browser checks; all passed. Pre-existing backend pytest suite (118 tests) re-run as a sanity check since no backend code changed for this fix.",
+  "passed": 6,
+  "failed": 0,
+  "bugs": [],
+  "action_items": [],
+  "retest_needed": false,
+  "checks": [
+    {
+      "criterion": "Low-contrast/invisible text bug fix: uppercase micro-labels ('.eyebrow') on Location Intelligence are legible",
+      "name": "eyebrow-contrast-legible",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "All non-empty .eyebrow elements (STEP 2 · STATE, MIN SCORE, MIN CATCHMENT, STEP 6 · CANDIDATE LOCATIONS, etc.) computed color rgb(71, 85, 105) and font-size 11px; all visible. Run against public URL https://district-dive.preview.emergentagent.com/location-intelligence."
+    },
+    {
+      "criterion": "Disabled drill-down selects still show readable placeholder text before a parent is chosen",
+      "name": "disabled-selects-readable-placeholder",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "On first load, disabled District trigger shows 'Select district' and Town/City trigger shows 'Select town/city', both with opacity 1 and computed color rgb(100, 116, 139)."
+    },
+    {
+      "criterion": "Input placeholders are readable (filter-min-score / filter-min-population)",
+      "name": "input-placeholders-readable",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "::placeholder computed color for both filter-min-score ('0-100') and filter-min-population ('e.g. 50000') is rgb(100, 116, 139) with opacity 1."
+    },
+    {
+      "criterion": "Muted helper text is readable (hint + Tier- table cells)",
+      "name": "muted-helper-text-readable",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Hint '— select a state to begin the drill-down' computed color channels <= rgb(100,116,139), i.e. darker/equal; visible."
+    },
+    {
+      "criterion": "No functional regression in the drill-down flow (state -> district -> town/city -> candidate locations with map)",
+      "name": "drilldown-flow-no-regression",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Selected Uttar Pradesh -> ranked districts table loaded (Lucknow visible) -> selected Lucknow district -> towns/cities ranked (Hazratganj 82, Lucknow 78, Gomti Nagar 77) -> selected Hazratganj -> STEP 6 CANDIDATE LOCATIONS table with scores (31, 30) and geospatial map rendered. No HTTP >= 400, no serious console errors."
+    },
+    {
+      "criterion": "Contrast fix did not break other pages (Dashboard, Opportunity Map, AI Consultant/Consultant, Recommendations, Sources & Methodology)",
+      "name": "other-pages-render-no-regression",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Visited /, /opportunity-map, /consultant, /recommendations, /methodology; each main heading visible with non-transparent computed color; no serious console errors. (Routes are /consultant and /methodology per App.tsx, not /ai-consultant or /sources-methodology.)"
+    }
+  ],
+  "backend_sanity": {
+    "command": "cd /app/backend && python -m pytest -q -p no:cacheprovider",
+    "result": "118 passed, 1 warning (pre-existing deprecation warning, unrelated)",
+    "note": "No new backend test file added — this fix is CSS-only (frontend/src/index.css), no API-bearing criteria in this matrix."
+  }
+}

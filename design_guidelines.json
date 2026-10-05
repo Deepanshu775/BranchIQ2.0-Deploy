@@ -1,0 +1,346 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project_name": "BranchIQ 2.0 — District, Town, City, PIN-code and Location-Level Banking Branch Expansion Intelligence Platform",
+  "archetype": "ARCHETYPE 4: SWISS & HIGH-CONTRAST + ARCHETYPE 5: LUXURY CONSULTING (McKinsey/BCG Strategy Executive Decision System)",
+  "theme_strategy": {
+    "default_mode": "light",
+    "canvas_bg": "#F4F7FB",
+    "sidebar_bg": "#071426",
+    "character": "High-density institutional consulting intelligence platform. Crisp borders, dense analytical tables, high-contrast KPI cards, interactive Leaflet geospatial drill-down maps, and transparent analytical scoring models."
+  },
+  "typography": {
+    "font_family_heading": "Outfit, sans-serif",
+    "font_family_body": "IBM Plex Sans, Inter, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "font_imports": [
+      "@import \"@fontsource-variable/outfit\";",
+      "@import \"@fontsource/ibm-plex-sans\";",
+      "@import \"@fontsource-variable/jetbrains-mono\";"
+    ],
+    "scale_px": {
+      "display": 48,
+      "h1": 36,
+      "h2": 28,
+      "h3": 20,
+      "h4": 16,
+      "body": 15,
+      "caption": 13
+    },
+    "rules": {
+      "headlines": "tracking-tight font-semibold text-[#071426]",
+      "eyebrows": "text-xs uppercase tracking-wider font-semibold text-[#5A6E85]",
+      "numbers_stats": "font-mono font-bold tabular-nums text-[#071426]",
+      "body_copy": "text-sm leading-relaxed text-[#33475B]"
+    }
+  },
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#F4F7FB",
+        "on_bg": "#071426",
+        "on_bg_muted": "#5A6E85",
+        "roles": {
+          "border": "#DFE7F0",
+          "link": "#1687F8"
+        }
+      },
+      {
+        "name": "panel",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#071426",
+        "on_bg_muted": "#64748B",
+        "roles": {
+          "border": "#E5EAF2",
+          "accent_bar": "#1687F8",
+          "success": "#16A36A",
+          "warning": "#E79B24",
+          "danger": "#D9534F",
+          "info": "#27C3E8"
+        }
+      },
+      {
+        "name": "sidebar_executive",
+        "kind": "solid",
+        "bg": "#071426",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#8EA1B8",
+        "roles": {
+          "active_bg": "#0F2847",
+          "active_indicator": "#27C3E8",
+          "border": "#16273F",
+          "badge_bg": "#15335F"
+        }
+      },
+      {
+        "name": "hero_banner",
+        "kind": "gradient",
+        "contrast_against": "#0B1220",
+        "guarantee": "scrim: linear-gradient(135deg, #071426 0%, #0F233D 60%, #15335F 100%)",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#9CB1C9",
+        "roles": {
+          "accent_badge": "#27C3E8",
+          "highlight": "#1687F8"
+        }
+      },
+      {
+        "name": "badge_official",
+        "kind": "solid",
+        "bg": "#F1F5F9",
+        "on_bg": "#334155",
+        "on_bg_muted": "#64748B"
+      },
+      {
+        "name": "badge_branchiq_score",
+        "kind": "solid",
+        "bg": "#EFF6FF",
+        "on_bg": "#1D4ED8",
+        "on_bg_muted": "#3B82F6"
+      },
+      {
+        "name": "badge_public_market",
+        "kind": "solid",
+        "bg": "#ECFEFF",
+        "on_bg": "#0E7490",
+        "on_bg_muted": "#06B6D4"
+      },
+      {
+        "name": "badge_model_estimate",
+        "kind": "solid",
+        "bg": "#F5F3FF",
+        "on_bg": "#6D28D9",
+        "on_bg_muted": "#8B5CF6"
+      },
+      {
+        "name": "map_container",
+        "kind": "solid",
+        "bg": "#EAEFF5",
+        "on_bg": "#071426",
+        "on_bg_muted": "#5A6E85"
+      }
+    ],
+    "accent": "#1687F8",
+    "on_accent": "#FFFFFF",
+    "accent_cyan": "#27C3E8",
+    "palette": {
+      "dark_navy": "#071426",
+      "deep_navy": "#0C1D33",
+      "sidebar_navy": "#0B1220",
+      "professional_blue": "#1687F8",
+      "cyan": "#27C3E8",
+      "pure_white": "#FFFFFF",
+      "light_canvas": "#F4F7FB",
+      "border_gray": "#DFE7F0",
+      "card_border": "#E5EAF2",
+      "status_green": "#16A36A",
+      "status_orange": "#E79B24",
+      "status_red": "#D9534F",
+      "status_purple": "#7657D9"
+    },
+    "charts": [
+      "#1687F8",
+      "#27C3E8",
+      "#7657D9",
+      "#16A36A",
+      "#E79B24",
+      "#071426"
+    ]
+  },
+  "entry_surfaces": {
+    "/": "Executive intelligence platform with deep navy sidebar left, top bank/data selector header, and multi-tier analytics canvas featuring progressive drill-down (Bank → State → District → Town/City → PIN Code → Location), interactive Leaflet branch geospatial map, ranked tables, and scoring side-panels."
+  },
+  "badge_system": {
+    "data_origin": {
+      "OFFICIAL_REPORTED": {
+        "label": "OFFICIAL REPORTED DATA",
+        "classes": "bg-slate-100 text-slate-700 border border-slate-300"
+      },
+      "BRANCHIQ_SCORE": {
+        "label": "BRANCHIQ ANALYTICAL SCORE",
+        "classes": "bg-blue-50 text-blue-700 border border-blue-200"
+      },
+      "PUBLIC_MARKET": {
+        "label": "PUBLIC MARKET INDICATOR",
+        "classes": "bg-cyan-50 text-cyan-800 border border-cyan-200"
+      },
+      "MODEL_ESTIMATE": {
+        "label": "MODEL-GENERATED ESTIMATE",
+        "classes": "bg-purple-50 text-purple-700 border border-purple-200"
+      }
+    },
+    "confidence_level": {
+      "HIGH": {
+        "label": "HIGH CONFIDENCE",
+        "classes": "bg-emerald-50 text-emerald-700 border border-emerald-200"
+      },
+      "MEDIUM": {
+        "label": "MEDIUM CONFIDENCE",
+        "classes": "bg-amber-50 text-amber-700 border border-amber-200"
+      },
+      "LIMITED": {
+        "label": "LIMITED DATA",
+        "classes": "bg-rose-50 text-rose-700 border border-rose-200"
+      }
+    },
+    "decision_status": {
+      "EXPAND": {
+        "label": "EXPAND NOW",
+        "classes": "bg-emerald-600 text-white font-medium"
+      },
+      "SELECTIVE_EXPANSION": {
+        "label": "SELECTIVE EXPANSION",
+        "classes": "bg-blue-600 text-white font-medium"
+      },
+      "MAINTAIN_OPTIMIZE": {
+        "label": "MAINTAIN / OPTIMIZE",
+        "classes": "bg-amber-600 text-white font-medium"
+      },
+      "DIGITAL_FIRST": {
+        "label": "DIGITAL-FIRST STRATEGY",
+        "classes": "bg-purple-600 text-white font-medium"
+      },
+      "REVIEW_STRATEGY": {
+        "label": "REVIEW NETWORK STRATEGY",
+        "classes": "bg-rose-600 text-white font-medium"
+      }
+    }
+  },
+  "layout_and_grids": {
+    "shell": "flex h-screen w-screen overflow-hidden bg-[#F4F7FB]",
+    "sidebar": "w-64 min-w-64 bg-[#071426] border-r border-[#16273F] flex flex-col z-30 transition-all duration-200",
+    "main_content": "flex-1 flex flex-col h-full overflow-hidden",
+    "header": "h-16 border-b border-[#DFE7F0] bg-white px-6 flex items-center justify-between z-20 shrink-0",
+    "workspace_canvas": "flex-1 overflow-y-auto p-6 space-y-6",
+    "bento_grid_summary": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4",
+    "split_drilldown_layout": "grid grid-cols-1 lg:grid-cols-12 gap-6 items-start",
+    "map_and_detail_grid": "lg:col-span-8 flex flex-col gap-4",
+    "side_intelligence_panel": "lg:col-span-4 flex flex-col gap-4"
+  },
+  "components_specification": {
+    "header": {
+      "path": "frontend/src/components/Header.tsx",
+      "features": [
+        "Bank selector dropdown (grouped Public Sector Banks: SBI, PNB, BOB, Canara; Private Sector Banks: HDFC, ICICI, Axis, Kotak)",
+        "Live data status indicator badge ('● RBI & Census Datasets Connected')",
+        "Timeframe / FY selector ('FY2025-26 Expansion Horizon')",
+        "'Generate Executive Report' primary CTA button triggering comprehensive printable dossier modal",
+        "Quick search bar for PIN codes, Towns, Districts (e.g., '560001', 'Indiranagar', 'Pune')"
+      ]
+    },
+    "sidebar_navigation": {
+      "path": "frontend/src/components/Sidebar.tsx",
+      "nav_items": [
+        {"id": "dashboard", "label": "Executive Overview", "icon": "LayoutDashboard"},
+        {"id": "location_intelligence", "label": "Location Intelligence (2.0)", "icon": "MapPin", "badge": "NEW"},
+        {"id": "opportunity_map", "label": "State & District Map", "icon": "Globe"},
+        {"id": "bank_comparison", "label": "Bank Peer Comparison", "icon": "BarChart3"},
+        {"id": "network_analysis", "label": "Branch Network & Whitespace", "icon": "Network"},
+        {"id": "recommendations", "label": "AI Strategy & Candidate Ranking", "icon": "Sparkles"},
+        {"id": "ai_consultant", "label": "Strategic AI Consultant", "icon": "Bot"},
+        {"id": "methodology", "label": "Data Registry & Methodology", "icon": "FileText"}
+      ]
+    },
+    "location_intelligence_view": {
+      "path": "frontend/src/pages/LocationIntelligence.tsx",
+      "description": "The flagship BranchIQ 2.0 progressive drill-down module.",
+      "drill_down_steps": [
+        "1. Select Bank (e.g. ICICI Bank, State Bank of India, HDFC Bank)",
+        "2. Select State (e.g. Maharashtra, Karnataka, Tamil Nadu, Uttar Pradesh, Gujarat)",
+        "3. Select District (e.g. Pune, Bengaluru Urban, Mumbai Suburban, Ahmedabad)",
+        "4. Select Town/City/Taluk (e.g. Indiranagar, Hinjewadi, Whitefield, Kothrud)",
+        "5. Select PIN Code (e.g. 560038, 411057, 560066)",
+        "6. Select/Inspect Candidate Branch Location (e.g. Hinjewadi Phase 1 Tech Park, Indiranagar 100ft Rd Metro)"
+      ],
+      "widgets": [
+        "Progressive drilldown breadcrumb ribbon with instant jump tokens",
+        "Multi-layer Interactive Geospatial Map (Leaflet) with Bank Branches (Blue), Competitor Branches (Slate), Candidate Expansion Sites (Gold/Green with pulsating ring)",
+        "Radius catchment buffer toggles (1km, 3km, 5km) with live population, deposit pool, and commercial density calculation",
+        "Cannibalization & Overlap risk indicator (distance to closest sister branch with risk score 0-100%)",
+        "Transparent 6-Pillar Opportunity Score breakdown card (Credit-Deposit Ratio, Unbanked Population Density, Commercial Activity, Competitor Whitespace, MSME Hub Index, Infrastructure Growth)",
+        "'Why this location?' strategic rationale bullet points + risk flags",
+        "Data Confidence & Provenance metadata drawer (Source: RBI DBIE, Census 2011/2024 Projections, MoSPI MSME Registry, GSTN Economic Indicators)",
+        "Competitive proximity list (Nearest HDFC, Axis, SBI, Kotak branches with distance in km)"
+      ]
+    },
+    "geospatial_leaflet_map": {
+      "path": "frontend/src/components/GeospatialMap.tsx",
+      "libraries_required": ["leaflet", "@types/leaflet"],
+      "marker_color_rules": {
+        "candidate_high_opportunity": "#16A36A",
+        "candidate_medium_opportunity": "#E79B24",
+        "candidate_low_opportunity": "#D9534F",
+        "selected_bank_existing_branch": "#1687F8",
+        "competitor_branch": "#64748B"
+      },
+      "features": [
+        "Custom SVG pin markers with bank icons and opportunity badges",
+        "Interactive popups with Quick Score, Estimated Deposit Pool (₹ Cr), Cannibalization Risk, and 'Inspect Deep Dive' action",
+        "Catchment buffer circles with translucent fills",
+        "Heatmap overlay toggle for Economic Activity Density",
+        "Filter controls directly above map: Minimal Opportunity Score (0-100), Max Cannibalization %, Competitor Distance threshold"
+      ]
+    },
+    "kpi_cards": {
+      "path": "frontend/src/components/KPICard.tsx",
+      "style": "bg-white border border-[#DFE7F0] rounded-[14px] p-5 shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md hover:border-[#CBD5E1]",
+      "accent_bar": "h-1 w-full absolute top-0 left-0 bg-gradient-to-r from-[#1687F8] to-[#27C3E8]"
+    },
+    "ai_consultant_chat": {
+      "path": "frontend/src/components/AIConsultantChat.tsx",
+      "capabilities": [
+        "Pre-seeded strategic questions ('Why should ICICI open in Hinjewadi Phase 1 vs Wakad?', 'Calculate cannibalization risk for SBI in Indiranagar', 'Rank top 5 unbanked PIN codes in Pune district')",
+        "Structured consulting replies with table references, score citations, and downloadable execution checklist"
+      ]
+    },
+    "executive_report_modal": {
+      "path": "frontend/src/components/ExecutiveReportModal.tsx",
+      "features": [
+        "Executive Summary for C-Suite (MD/CEO & Head of Retail Banking)",
+        "Prioritized Branch Opening Roadmap (Quarter-by-Quarter CapEx & ROI projection)",
+        "Geospatial cluster map print preview",
+        "Export as PDF / Print formatted dossier"
+      ]
+    }
+  },
+  "visual_enhancers": {
+    "grid_background": "background-image: radial-gradient(#CBD5E1 0.75px, transparent 0.75px); background-size: 20px 20px;",
+    "card_radius": "rounded-[14px]",
+    "card_shadow": "shadow-[0_2px_8px_rgba(7,20,38,0.04)] hover:shadow-[0_8px_24px_rgba(7,20,38,0.08)]",
+    "glass_header": "bg-white/95 backdrop-blur-md border-b border-[#DFE7F0]",
+    "active_pill": "bg-blue-50 text-[#1687F8] font-semibold border border-blue-200"
+  },
+  "motion": {
+    "page_transition": "animate-in fade-in duration-300",
+    "drawer_animation": "transition-transform ease-out duration-300",
+    "marker_pulse": "animate-pulse"
+  },
+  "accessibility": {
+    "wcag_compliance": "WCAG AA (minimum 4.5:1 text contrast for all labels and table data)",
+    "data_testid_convention": "kebab-case role-based test IDs for every interactive filter, select, button, tab, and map marker (e.g. data-testid='bank-selector-dropdown', data-testid='drilldown-district-select', data-testid='candidate-location-card-560038', data-testid='generate-report-btn')"
+  },
+  "image_urls": [
+    {
+      "category": "bank_branch_visual",
+      "description": "ICICI Bank illuminated branch exterior for Indian banking context preview",
+      "url": "https://images.unsplash.com/photo-1785220299728-b4e28272616b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHxiYW5rJTIwYnJhbmNoJTIwZmluYW5jZXxlbnwwfHx8fDE3OTExMzE3Mjh8MA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "bank_branch_daylight",
+      "description": "Modern urban retail banking branch entrance",
+      "url": "https://images.unsplash.com/photo-1786618315979-ce020c4e0516?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHw0fHxiYW5rJTIwYnJhbmNoJTIwZmluYW5jZXxlbnwwfHx8fDE3OTExMzE3Mjh8MA&ixlib=rb-4.1.0&q=85"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "1. Preserve the existing modern BranchIQ aesthetic faithfully (Light #F4F7FB canvas, Deep Navy #071426 executive sidebar, #1687F8 professional blue, #27C3E8 cyan accent, #DFE7F0 borders, and 14px rounded cards).",
+    "2. Implement the full progressive drill-down workflow: Bank (Public & Private) -> State -> District -> Town/City/Taluk -> PIN Code -> Candidate Branch Location with seamless reactivity across tables, maps, and score cards.",
+    "3. Install 'leaflet' and '@types/leaflet' in frontend for rich interactive OpenStreetMap tiles with custom SVG bank pins, competitor dots, and candidate opportunity rings.",
+    "4. Deliver comprehensive data depth covering major Indian banking hubs and emerging tier-2/3 growth corridors (Maharashtra: Pune, Mumbai Suburban, Thane, Nagpur, Nashik; Karnataka: Bengaluru Urban, Mysuru, Belagavi; Tamil Nadu: Chennai, Coimbatore; Gujarat: Ahmedabad, Surat; Uttar Pradesh: Gautam Buddha Nagar/Noida, Lucknow; Telangana: Hyderabad).",
+    "5. Ensure every candidate location card shows: 6-pillar score breakdown (0-100), CD Ratio, Estimated 3-Year Deposit Pool (₹ Cr), Unbanked Population Catchment, Cannibalization Risk score, and Clear Rationale bullets.",
+    "6. Include the Strategic AI Consultant with interactive pre-calculated expansion scenarios and deep analytical explanations.",
+    "7. Implement the Executive Report Generation modal with export/print layout for C-level bank executives.",
+    "8. Maintain strict data-testid attributes on all interactive controls for testability."
+  ]
+}
